@@ -3,6 +3,7 @@ import { calculAge } from './about.js';
 
 const scrollProfil = document.querySelector('.profil-container');
 const scrollAbout = document.querySelector('.about-container');
+const scrollProject = document.querySelector('.projects-grid')
 
 const headerName = document.querySelector('.js-header-profil');
 const headerAbout = document.querySelector('.js-header-about');
@@ -11,7 +12,7 @@ const headerContact = document.querySelector('.js-header-contact');
 
 headerScrollTo(headerName, scrollProfil);
 headerScrollTo(headerAbout, scrollAbout);
-headerScrollTo(headerProject, scrollProfil);
+headerScrollTo(headerProject, scrollProject);
 headerScrollTo(headerContact, scrollProfil);
 
 document.querySelector('.about-age').innerHTML = calculAge()
