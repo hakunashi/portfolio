@@ -6,8 +6,13 @@
 }
 
 .main {
-    padding: 100px;
-    height: 1000px;
+    padding: 100px 150px;
 
     font-size: 25px;
+}
+
+.section-title {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
 }

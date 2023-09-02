@@ -31,3 +31,23 @@
     height: 100%;
     object-fit: cover;
 }
+
+/*--------------------------------------------------------------*/
+
+.techno-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 80px;
+}
+
+.techno-container *{
+    padding: 30px;
+}
+
+.img-techno {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
