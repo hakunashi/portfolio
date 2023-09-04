@@ -10,6 +10,12 @@
     display: flex;
 
     padding: 50px 70px;
+
+    position: relative;
+    left: -100px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, left 0.5s ease
 }
 
 .project-img-container {

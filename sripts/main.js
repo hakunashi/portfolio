@@ -15,4 +15,25 @@ headerScrollTo(headerAbout, scrollAbout);
 headerScrollTo(headerProject, scrollProject);
 headerScrollTo(headerContact, scrollProfil);
 
-document.querySelector('.about-age').innerHTML = calculAge()
+document.querySelector('.about-age').innerHTML = calculAge();
+
+function elementVisible(element) {
+    const elemente = element.getBoundingClientRect();
+    return (
+        elemente.top <= window.innerHeight &&
+        elemente.bottom >= 0
+    )
+}
+
+function afficherElement() {
+    const elements = document.querySelectorAll('.projects-grid').forEach((element) => {
+        if(elementVisible(element)) {
+            element.style.opacity = "1";
+            element.style.left = '50%'
+        }
+    });
+}
+
+window.addEventListener('scroll', () => { afficherElement() });
+
+afficherElement()
