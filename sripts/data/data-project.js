@@ -5,7 +5,7 @@ const javascriptLogo = "../images/techno/javascript.png";
 export const dataProject = [
     {
         name: "Youtube project",
-        img: "../images/project-thumb/profil.jpg",
+        img: "../images/project-thumb/Youtube.png",
         link: "../project/youtube-update/youtube.html",
         description: "Ceci est un clone de youtube qui est un exercice html css pour la mise en page",
         techno: [
@@ -14,14 +14,24 @@ export const dataProject = [
         ]
     },
     {
-        name: "Youtube project 2",
+        name: "Instagram project",
         img: "../images/project-thumb/profil.jpg",
-        link: "../project/youtube-update/youtube.html",
-        description: "Ceci est un clone de youtube qui est un exercice html css pour la mise en page",
+        link: "../project/instagram/instagram.html",
+        description: "Ceci est un clone d'instagram qui est un exercice html css pour la mise en page",
+        techno: [
+            htmlLogo,
+            cssLogo
+        ]
+    },
+    {
+        name: "Amazon project",
+        img: "../images/project-thumb/profil.jpg",
+        link: "../project/javascript-project/amazon.html",
+        description: "Ceci est un clone d'Amazon qui est un exercice html css pour la mise en page",
         techno: [
             htmlLogo,
             cssLogo,
             javascriptLogo
         ]
-    },
+    }
 ]

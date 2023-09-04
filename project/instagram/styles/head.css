@@ -1,0 +1,77 @@
+.fy-title-content {
+    position: relative;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid lightgray;
+    height: 70px;
+}
+
+.fy-title {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
+
+.span-follow {
+    margin-left: 5px;
+
+    color: #C7C7C7;
+}
+
+.fy-story-content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    width: 100%;
+}
+
+.followed-story-content {
+    width: 66px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.followed-story-img-content {
+    display: flex;
+
+    width: 59px;
+    height: 59px;
+
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+
+    border: solid 3px transparent;
+    border-radius: 100%;
+    background-image:
+        linear-gradient(white, white),
+        linear-gradient(45deg, #FFDC80, #C13584);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.followed-story-img,
+.profil-img {
+    border-radius: 100%;
+
+    width: 56px;
+    height: 56px;
+}
+
+.followed-story-name {
+    margin-top: 7px;
+
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
