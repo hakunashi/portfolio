@@ -1,10 +1,11 @@
 import { headerScrollTo } from './header.js';
 import { calculAge } from './about.js';
 import { afficherElement } from './project.js';
+import { dataProject } from './data/data-project.js';
 
 const scrollProfil = document.querySelector('.profil-container');
 const scrollAbout = document.querySelector('.about-container');
-const scrollProject = document.querySelector('.projects-grid');
+const scrollProject = document.querySelector('.js-section-second-title');
 
 const headerName = document.querySelector('.js-header-profil');
 const headerAbout = document.querySelector('.js-header-about');
@@ -18,7 +19,49 @@ headerScrollTo(headerContact, scrollProfil);
 
 document.querySelector('.about-age').innerHTML = calculAge();
 
-const allProject = document.querySelectorAll('.projects-grid')
 
-window.addEventListener('scroll', () => { afficherElement(allProject) });
-afficherElement(allProject);
+function visibleProjectElement() {
+    const allProject = document.querySelectorAll('.projects-grid')
+    window.addEventListener('scroll', () => { afficherElement(allProject) });
+    afficherElement(allProject);
+}
+
+
+let allProjectGridHTML = document.querySelector('.all-project-grid');
+
+dataProject.forEach((project) => {
+    let elementTech = project.techno
+    let allElementTech = ''
+
+    elementTech.forEach((tech) => {
+        let htmltech = `
+        <div class="project-techno-img-container">
+            <img class="project-techno-img" src="${tech}">
+        </div>
+        `
+
+        allElementTech += htmltech
+    })
+
+    let element = `
+    <div class="projects-grid">
+        <a href="${project.link}" class="project-img-container">
+            <img class="project-img" src="${project.img}">
+        </a>
+
+        <div class="project-description-container">
+            <p class="project-title">${project.name}</p>
+            <p class="project-description">${project.description}
+            </p>
+
+            <div class="project-techno-container">
+                ${allElementTech}
+            </div>
+        </div>
+    </div>
+    `
+
+    allProjectGridHTML.innerHTML += element
+})
+
+visibleProjectElement();
