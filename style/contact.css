@@ -1,0 +1,42 @@
+.contact-container {
+    margin-top: 50px;
+}
+
+.contact{
+    display: flex;
+    align-self: center;
+
+    margin: 30px 60px;
+    padding: 60px;
+
+    background-color: gainsboro;
+
+    border-radius: 15px;
+}
+
+#form-contact{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+#form-contact input,
+#form-contact textarea{
+    max-width: 100%;
+
+    margin: 20px 0px 30px 0px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0px 3px 8px gray;
+
+    resize: none;
+}
+
+#form-contact input:focus,
+#form-contact textarea:focus{
+    outline: none;
+}
