@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/style/about.css">
     <link rel="stylesheet" href="/style/projet.css">
     <link rel="stylesheet" href="/style/contact.css">
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -51,8 +54,8 @@
             <p>Technologie</p>
             <img class="img-techno" src="/images/techno/html5.png">
             <img class="img-techno" src="/images/techno/css3.png">
+            <img class="img-techno" src="/images/techno/sass.png">
             <img class="img-techno" src="/images/techno/javascript.png">
-            <img class="img-techno" src="/images/techno/git.png">
 
         </div>
 
@@ -82,7 +85,7 @@
 
         <div class="contact-container">
 
-            <p class="contact-title">Contact</p>
+            <p class="section-title js-contact-title">Contact</p>
 
             <div class="contact">
                 <form id="form-contact" action="">
@@ -90,13 +93,17 @@
                     <input type="text" id="form-name">
 
                     <label for="form-mail">E-mail</label>
-                    <input type="text" id="form-mail">
+                    <input type="email" id="form-mail">
                     
                     <label for="form-subject">Objet</label>
                     <input type="text" id="form-subject">
 
                     <label for="form-message">Message</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="form-message" cols="30" rows="8"></textarea>
+
+                    <p class="form-erreur"></p>
+
+                    <button class="form-btn js-submit-form" type="submit">Envoyer</button>
                 </form>
             </div>
         </div>
