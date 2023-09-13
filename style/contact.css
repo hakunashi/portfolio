@@ -1,4 +1,4 @@
-.contact-container {
+ .contact-container {
     margin-top: 50px;
 }
 
@@ -7,7 +7,7 @@
     align-self: center;
 
     margin: 30px 60px;
-    padding: 60px;
+    padding: 30px;
 
     background-color: gainsboro;
 
@@ -25,8 +25,8 @@
 #form-contact textarea{
     max-width: 100%;
 
-    margin: 20px 0px 30px 0px;
-    padding: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
 
     border: none;
     border-radius: 12px;
@@ -39,4 +39,35 @@
 #form-contact input:focus,
 #form-contact textarea:focus{
     outline: none;
+}
+
+.form-btn{
+    cursor: pointer;
+
+    align-self: center;
+
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0px 5px 5px gray;
+}
+
+.form-erreur{
+    color: red;
+}
+
+.form-btn:hover {background-color: rgb(208, 208, 208);}
+
+.form-btn:active {
+    background-color: rgb(208, 208, 208);
+    box-shadow: 0px 1px 8px gray;
+    transform: translateY(4px)
+}
+
+#form-mail:invalid {
+    background-color: antiquewhite;
+    border: 3px solid red;
 }
