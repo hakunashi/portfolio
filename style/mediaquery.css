@@ -1,0 +1,44 @@
+@media (max-width: 767px) {
+    
+    body {
+        background-color: aqua;
+    }
+
+    .main {
+        padding: 100px 40px;
+    
+        font-size: 25px;
+    }
+
+    .profil-img-container,
+    .about-img-container {
+        display: none;
+    }
+
+    .profil-perso {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-description-container {
+        align-items: center;
+    }
+    
+    .projects-grid a {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .project-description {
+        text-align: center;
+    }
+
+}

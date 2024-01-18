@@ -22,13 +22,11 @@ headerScrollTo(headerContact, scrollContact);
 
 document.querySelector('.about-age').innerText = calculAge()
 
-
 function visibleProjectElement() {
     const allProject = document.querySelectorAll('.projects-grid')
-    window.addEventListener('scroll', () => { afficherElement(allProject) });
+    window.addEventListener('scroll', () => {afficherElement(allProject)} );
     afficherElement(allProject);
 }
-
 
 let allProjectGridHTML = document.querySelector('.all-project-grid');
 
@@ -101,7 +99,7 @@ document.querySelector('.js-submit-form').addEventListener('click', (e) => {
         formErreur.innerText = '';
     }
 
-    //SendEmail(formInputs);
+    SendEmail(formInputs);
 
     alert('Votre message a bien été envoyer! Merci.')
 
