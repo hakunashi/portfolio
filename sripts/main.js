@@ -2,7 +2,7 @@ import { headerScrollTo } from './header.js';
 import { calculAge } from './about.js';
 import { afficherElement } from './project.js';
 import { dataProject } from './data/data-project.js';
-import { SendEmail } from './contact.js';
+//import { SendEmail } from './contact.js';
 
 const scrollProfil = document.querySelector('.profil-container');
 const scrollAbout = document.querySelector('.about-container');
@@ -67,6 +67,8 @@ dataProject.forEach((project) => {
 
 visibleProjectElement();
 
+/*
+
 let formErreur = document.querySelector('.form-erreur');
 
 let fomrName = document.querySelector('#form-name')
@@ -108,3 +110,5 @@ document.querySelector('.js-submit-form').addEventListener('click', (e) => {
     formObject.value = "";
     formMessage.value = "";
 })
+
+*/
