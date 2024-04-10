@@ -1,0 +1,61 @@
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: "Exo 2", "", "sans-serif"
+    color: $primary-font-color
+    background-color: $primary-bg-color
+    font-size: 13px
+    button
+        font-family: "Exo 2", "", "sans-serif"
+    a
+        color: $secondary-font-color
+        text-decoration: none
+        &:visited
+            color: $secondary-font-color
+            text-decoration: none
+    ul
+        list-style: none
+    header
+        padding: 20px
+        background-color: $secondary-bg-color
+        position: sticky
+        top: 0
+        z-index: 1
+        display: flex
+        justify-content: space-between
+
+    svg
+        fill: $primary-font-color
+    main
+        margin-top: 10px
+    footer
+        background-color: $third-bg-color
+        text-align: center
+        padding: 10px
+        li, h2, h3
+            padding: 10px
+        ul
+            display: flex
+            justify-content: space-around
+            li
+                a
+                    color: $primary-font-color
+                    &:visited
+                        color: $primary-font-color
+        ul#social-links
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                width: 90vw
+                height: 2px
+                background-color: $primary-font-color
+        ul#footer-nav
+            font-size: 1.1rem
+            font-weight: 600
+        > p:nth-of-type(1)
+            font-weight: 100
