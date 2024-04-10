@@ -118,6 +118,7 @@ main section#presentation article#techno div#techno-grid {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
 }
 main section#presentation article#techno div#techno-grid svg {
   fill: #fff;
@@ -170,9 +171,43 @@ main section#projects {
 main section#projects p, main section#projects h2, main section#projects h3 {
   padding: 10px;
 }
-main section#projects div {
+main section#projects div#projects-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main section#projects div#projects-section div#project-slide {
+  width: 300px;
+  height: 270px;
+  overflow: hidden;
+}
+main section#projects div#projects-section div#project-slide div#container-items {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  transition: 0.4s ease-in-out;
+}
+main section#projects div#projects-section div#project-slide div#container-items article img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#projects div#projects-section div#project-slide div#container-items article div.article-desc {
+  background-color: red;
+}
+main section#projects div#projects-section div#project-slide div#container-items article div.article-desc p.item-tech {
+  background-color: pink;
+}
+main section#projects div#projects-section div#project-slide div#slide-btn {
+  position: relative;
+  bottom: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+main section#projects div#projects-section div#project-slide div#slide-btn button {
+  padding: 10px 20px;
+  border: 1px solid #fff;
 }
 
 /*Projects page*/
