@@ -1,31 +1,77 @@
 @import "_variables"
 @import "_base"
+@import "_animations"
 
 /*Header*/
 header
+    h1
+        display: flex
+        align-items: center
+        justify-content: center
+        div#cube
+            position: relative
+            transform-style: preserve-3d
+            width: 50px
+            height: 50px
+            animation: rotate 8s linear infinite
+            div.side
+                position: absolute
+                width: 50px
+                height: 50px
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: $primary-font-color
+                p
+                    cursor: default
+                    font-size: 0.8rem
+                    font-weight: bolder
+                    color: $secondary-bg-color
+                &.cube_front
+                    transform: translateZ(25px)
+                &.cube_back
+                    transform: translateZ(-25px) rotateY(180deg)
+                &.cube_right
+                    transform: translateX(25px) rotateY(90deg)
+                &.cube_left
+                    transform: translateX(-25px) rotateY(-90deg)
+                &.cube_top
+                    background-color: rgb(213, 213, 213)
+                    transform: translateY(25px) rotateX(90deg)
+                &.cube_bottom
+                    background-color: rgb(213, 213, 213)
+                    transform: translateY(-25px) rotateX(90deg)
     nav#menu-nav
+        border-bottom: 2px white solid
         position: absolute
-        top: -10px
+        top: 0
         right: 0
+        left: 0
+        transform: translateX(100vw)
         padding: 5px
         background-color: $secondary-bg-color
         opacity: 0
         visibility: hidden
+        text-align: center
         font-size: 1.4rem
         transition: 0.4s ease-in-out
         &.active
             opacity: 1
             visibility: visible
-            top: 0px
+            transform: translateX(0)
         ul
             li
-                margin: 4px 0
+                padding: 4px 0
+                transition: ease-in-out 0.4s
                 a
                     color: $primary-font-color
                     text-decoration: none
                     &:visited
                         color: $primary-font-color
                         text-decoration: none
+                &:hover
+                    background-color: green
+                    transform: scale(1.1)
 
 /*Présentation page*/
 
@@ -87,8 +133,8 @@ main
             align-items: center
             div#project-slide
                 width: 300px
-                height: 270px
-                overflow: hidden
+                height: 300px
+                overflow-x: clip
                 div#container-items
                     display: flex
                     width: 100%
@@ -101,6 +147,9 @@ main
                             object-fit: cover
                         div.article-desc
                             background-color: red
+                            p
+                                display: flex
+                                justify-content: center
                             p.item-tech
                                 background-color: pink
                 div#slide-btn

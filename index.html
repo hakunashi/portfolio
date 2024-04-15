@@ -9,7 +9,24 @@
   </head>
   <body>
     <header>
-      <h1>Logo</h1>
+      <h1>
+        <div id="cube">
+          <div class="side cube_front">
+            <p>Isaac</p>
+          </div>
+          <div class="side cube_back">
+            <p>Web</p>
+          </div>
+          <div class="side cube_right">
+            <p>Dev</p>
+          </div>
+          <div class="side cube_left">
+            <p>Hello !</p>
+          </div>
+          <div class="side cube_top"></div>
+          <div class="side cube_bottom"></div>
+        </div>
+      </h1>
       <svg
         id="burger-btn"
         height="32px"
@@ -289,29 +306,7 @@
         <h2>Projets</h2>
         <div id="projects-section">
           <div id="project-slide">
-            <div id="container-items">
-              <article>
-                <img src="./asset/imgs/placeholder-3.png" alt="img1" />
-                <div class="article-desc">
-                  <p class="item-tech">toto</p>
-                  <p class="item-desc">toto</p>
-                </div>
-              </article>
-              <article>
-                <img src="./asset/imgs/placeholder-3.png" alt="img1" />
-                <div class="article-desc">
-                  <p class="item-tech">toto</p>
-                  <p class="item-desc">toto</p>
-                </div>
-              </article>
-              <article>
-                <img src="./asset/imgs/placeholder-3.png" alt="img1" />
-                <div class="article-desc">
-                  <p class="item-tech">toto</p>
-                  <p class="item-desc">toto</p>
-                </div>
-              </article>
-            </div>
+            <div id="container-items"></div>
             <div id="slide-btn">
               <button id="slide-btn-prev"><</button>
               <button id="slide-btn-next">></button>
@@ -411,6 +406,6 @@
       <p>navigation rapide</p>
       <p>© 2024 All rights reserved.</p>
     </footer>
-    <script src="./script/script.js"></script>
+    <script type="module" src="./script/script.js"></script>
   </body>
 </html>

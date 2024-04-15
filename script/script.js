@@ -1,3 +1,5 @@
+import { infos } from "./_data.js";
+
 const burgerbtn = document.getElementById("burger-btn");
 const menuNav = document.getElementById("menu-nav");
 const containerImg = document.getElementById("container-items");
@@ -35,6 +37,32 @@ buttonSlides[1].addEventListener('click', () => {
     containerImg.style.transform = `translateX(-${indexImagesActive * 100}%)`;
 })
 
-for(i=0,message="yo man"; i< 10; i++) {
-    console.log("toto",message)
+function createHtmlElement(htmlElement,content) {
+    let htmlEleme = document.createElement(htmlElement);
+    htmlEleme.append(content);
+    return htmlEleme
+}
+
+for (let i = 0;i < 3; i++ ) {
+    let article = createHtmlElement("article","");
+    let img = createHtmlElement("img",'');
+    let pDesc = createHtmlElement("p", infos[i].desc);
+    let pTech = createHtmlElement("p", "");
+    let divDescArticle = createHtmlElement("div","");
+
+    pTech.innerHTML = infos[i].techno[0];
+    pTech.classList.add("item-tech");
+    divDescArticle.classList.add('article-desc');
+    pDesc.classList.add("item-desc");
+    img.setAttribute("src", infos[i].thumbnail_path);
+
+    divDescArticle.appendChild(pTech)
+    divDescArticle.appendChild(pDesc)
+
+    article.appendChild(img);
+    article.appendChild(divDescArticle);
+
+    containerImg.appendChild(article);
+
+    console.log(infos[i]);
 }

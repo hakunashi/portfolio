@@ -33,6 +33,8 @@ body header {
   z-index: 1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  overflow-x: clip;
 }
 body svg {
   fill: #fff;
@@ -77,25 +79,88 @@ body footer > p:nth-of-type(1) {
   font-weight: 100;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotateY(360deg) rotateX(-5deg) translateY(3px);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(5deg) translateY(-3px);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(-5deg) translateY(3px);
+  }
+}
 /*Header*/
-header nav#menu-nav {
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1 div#cube {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 50px;
+  height: 50px;
+  animation: rotate 8s linear infinite;
+}
+header h1 div#cube div.side {
   position: absolute;
-  top: -10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+header h1 div#cube div.side p {
+  cursor: default;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: #4E4E4E;
+}
+header h1 div#cube div.side.cube_front {
+  transform: translateZ(25px);
+}
+header h1 div#cube div.side.cube_back {
+  transform: translateZ(-25px) rotateY(180deg);
+}
+header h1 div#cube div.side.cube_right {
+  transform: translateX(25px) rotateY(90deg);
+}
+header h1 div#cube div.side.cube_left {
+  transform: translateX(-25px) rotateY(-90deg);
+}
+header h1 div#cube div.side.cube_top {
+  background-color: rgb(213, 213, 213);
+  transform: translateY(25px) rotateX(90deg);
+}
+header h1 div#cube div.side.cube_bottom {
+  background-color: rgb(213, 213, 213);
+  transform: translateY(-25px) rotateX(90deg);
+}
+header nav#menu-nav {
+  border-bottom: 2px white solid;
+  position: absolute;
+  top: 0;
   right: 0;
+  left: 0;
+  transform: translateX(100vw);
   padding: 5px;
   background-color: #4E4E4E;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
   font-size: 1.4rem;
   transition: 0.4s ease-in-out;
 }
 header nav#menu-nav.active {
   opacity: 1;
   visibility: visible;
-  top: 0px;
+  transform: translateX(0);
 }
 header nav#menu-nav ul li {
-  margin: 4px 0;
+  padding: 4px 0;
+  transition: ease-in-out 0.4s;
 }
 header nav#menu-nav ul li a {
   color: #fff;
@@ -104,6 +169,10 @@ header nav#menu-nav ul li a {
 header nav#menu-nav ul li a:visited {
   color: #fff;
   text-decoration: none;
+}
+header nav#menu-nav ul li:hover {
+  background-color: green;
+  transform: scale(1.1);
 }
 
 /*Présentation page*/
@@ -178,8 +247,8 @@ main section#projects div#projects-section {
 }
 main section#projects div#projects-section div#project-slide {
   width: 300px;
-  height: 270px;
-  overflow: hidden;
+  height: 300px;
+  overflow-x: clip;
 }
 main section#projects div#projects-section div#project-slide div#container-items {
   display: flex;
@@ -195,6 +264,10 @@ main section#projects div#projects-section div#project-slide div#container-items
 }
 main section#projects div#projects-section div#project-slide div#container-items article div.article-desc {
   background-color: red;
+}
+main section#projects div#projects-section div#project-slide div#container-items article div.article-desc p {
+  display: flex;
+  justify-content: center;
 }
 main section#projects div#projects-section div#project-slide div#container-items article div.article-desc p.item-tech {
   background-color: pink;
