@@ -26,6 +26,7 @@ body ul {
   list-style: none;
 }
 body header {
+  min-height: 8svh;
   padding: 20px;
   background-color: #4E4E4E;
   position: sticky;
@@ -38,14 +39,17 @@ body header {
 }
 body svg {
   fill: #fff;
+  cursor: pointer;
 }
 body main {
   margin-top: 10px;
+  min-height: 55svh;
 }
 body footer {
   background-color: #313131;
   text-align: center;
   padding: 10px;
+  min-height: 10svh;
 }
 body footer li, body footer h2, body footer h3 {
   padding: 10px;
@@ -71,6 +75,12 @@ body footer ul#social-links::after {
   height: 2px;
   background-color: #fff;
 }
+body footer ul#social-links li {
+  transition: 0.4s ease-in-out;
+}
+body footer ul#social-links li:hover {
+  transform: scale(1.1);
+}
 body footer ul#footer-nav {
   font-size: 1.1rem;
   font-weight: 600;
@@ -81,13 +91,13 @@ body footer > p:nth-of-type(1) {
 
 @keyframes rotate {
   0% {
-    transform: rotateY(360deg) rotateX(-5deg) translateY(3px);
+    transform: rotateY(360deg) rotateX(-5deg) translateY(5px);
   }
   50% {
-    transform: rotateY(180deg) rotateX(5deg) translateY(-3px);
+    transform: rotateY(180deg) rotateX(5deg) translateY(-5px);
   }
   100% {
-    transform: rotateY(0deg) rotateX(-5deg) translateY(3px);
+    transform: rotateY(0deg) rotateX(-5deg) translateY(5px);
   }
 }
 /*Header*/
@@ -101,7 +111,7 @@ header h1 div#cube {
   transform-style: preserve-3d;
   width: 50px;
   height: 50px;
-  animation: rotate 8s linear infinite;
+  animation: rotate 10s linear infinite;
 }
 header h1 div#cube div.side {
   position: absolute;
@@ -151,7 +161,7 @@ header nav#menu-nav {
   visibility: hidden;
   text-align: center;
   font-size: 1.4rem;
-  transition: 0.4s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 header nav#menu-nav.active {
   opacity: 1;
@@ -165,6 +175,7 @@ header nav#menu-nav ul li {
 header nav#menu-nav ul li a {
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 header nav#menu-nav ul li a:visited {
   color: #fff;
@@ -289,8 +300,16 @@ main#main-projects {
 }
 main#main-projects ul#projects-grid {
   display: grid;
-  text-align: center;
   grid-template-columns: 1fr;
+}
+main#main-projects ul#projects-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80svw;
+}
+main#main-projects ul#projects-grid li img {
+  width: 100%;
 }
 
 /*Projects page*/

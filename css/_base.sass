@@ -19,6 +19,7 @@ body
     ul
         list-style: none
     header
+        min-height: 8svh
         padding: 20px
         background-color: $secondary-bg-color
         position: sticky
@@ -30,12 +31,15 @@ body
         overflow-x: clip
     svg
         fill: $primary-font-color
+        cursor: pointer
     main
         margin-top: 10px
+        min-height: 55svh
     footer
         background-color: $third-bg-color
         text-align: center
         padding: 10px
+        min-height: 10svh
         li, h2, h3
             padding: 10px
         ul
@@ -55,6 +59,10 @@ body
                 width: 90vw
                 height: 2px
                 background-color: $primary-font-color
+            li
+                transition: 0.4s ease-in-out
+                &:hover
+                    transform: scale(1.1)
         ul#footer-nav
             font-size: 1.1rem
             font-weight: 600
