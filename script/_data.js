@@ -25,7 +25,7 @@ xml:space="preserve"
 />
 </svg>`
         ],
-        desc: "ce projet est une copie de youtube"
+        desc: "Ce projet a pour but de reproduire la page d'acceuil de Youtube"
     },
     {
         thumbnail_path: "./asset/project-thumb/Instagram.png",
@@ -64,7 +64,7 @@ xml:space="preserve"
 />
 </svg>`
         ],
-        desc: "desctiption 2"
+        desc: "Ce projet a pour but de reproduire la page d'acceuil d'Instagram"
     },
     {
         thumbnail_path: "./asset/project-thumb/rock-paper-scissors.png",
@@ -92,10 +92,10 @@ xml:space="preserve"
 />
 </svg>`
         ],
-        desc: "desctiption 3"
+        desc: "Ce projet est un pierre feuille ciseaux qui utilise le localStorage"
     },
     {
-        thumbnail_path: "./asset/project-thumb/rock-paper-scissors.png",
+        thumbnail_path: "./asset/project-thumb/Amazon.png",
         techno: [
             `<svg
 id="burger-btn"
@@ -120,6 +120,6 @@ xml:space="preserve"
 />
 </svg>`
         ],
-        desc: "desctiption 3"
+        desc: "Ce projet est un copie de amazon avec certainnes fonctionnalités pour pratiquer les notions de local storage, fonctions et objets"
     }
 ]

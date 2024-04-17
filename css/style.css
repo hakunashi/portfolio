@@ -39,7 +39,6 @@ body header {
 }
 body svg {
   fill: #fff;
-  cursor: pointer;
 }
 body main {
   margin-top: 10px;
@@ -148,6 +147,9 @@ header h1 div#cube div.side.cube_bottom {
   background-color: rgb(213, 213, 213);
   transform: translateY(-25px) rotateX(90deg);
 }
+header svg {
+  cursor: pointer;
+}
 header nav#menu-nav {
   border-bottom: 2px white solid;
   position: absolute;
@@ -176,14 +178,19 @@ header nav#menu-nav ul li a {
   color: #fff;
   text-decoration: none;
   display: block;
+  transition: ease-in-out 0.4s;
 }
 header nav#menu-nav ul li a:visited {
   color: #fff;
   text-decoration: none;
 }
 header nav#menu-nav ul li:hover {
-  background-color: green;
+  color: #4E4E4E;
+  background-color: #fff;
   transform: scale(1.1);
+}
+header nav#menu-nav ul li:hover a {
+  color: #4E4E4E;
 }
 
 /*Présentation page*/
@@ -274,14 +281,15 @@ main section#projects div#projects-section div#project-slide div#container-items
      object-fit: cover;
 }
 main section#projects div#projects-section div#project-slide div#container-items article div.article-desc {
-  background-color: red;
+  background-color: #313131;
 }
 main section#projects div#projects-section div#project-slide div#container-items article div.article-desc p {
   display: flex;
   justify-content: center;
 }
 main section#projects div#projects-section div#project-slide div#container-items article div.article-desc p.item-tech {
-  background-color: pink;
+  padding: 2px;
+  background-color: #5F5F5F;
 }
 main section#projects div#projects-section div#project-slide div#slide-btn {
   position: relative;
@@ -290,8 +298,18 @@ main section#projects div#projects-section div#project-slide div#slide-btn {
   justify-content: space-between;
 }
 main section#projects div#projects-section div#project-slide div#slide-btn button {
+  cursor: pointer;
   padding: 10px 20px;
+  background-color: #313131;
+  color: #fff;
   border: 1px solid #fff;
+  transition: 0.4s ease-in-out;
+}
+main section#projects div#projects-section div#project-slide div#slide-btn button:hover {
+  background-color: #fff;
+  color: #313131;
+  border: 1px solid #313131;
+  transform: scale(1.1);
 }
 
 /*Projects page*/
@@ -306,10 +324,19 @@ main#main-projects ul#projects-grid li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80svw;
+}
+main#main-projects ul#projects-grid li div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main#main-projects ul#projects-grid li img {
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 70%;
+  border: 4px white solide;
 }
 
 /*Projects page*/

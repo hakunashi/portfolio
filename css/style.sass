@@ -41,6 +41,8 @@ header
                 &.cube_bottom
                     background-color: rgb(213, 213, 213)
                     transform: translateY(-25px) rotateX(90deg)
+    svg
+        cursor: pointer
     nav#menu-nav
         border-bottom: 2px white solid
         position: absolute
@@ -67,12 +69,16 @@ header
                     color: $primary-font-color
                     text-decoration: none
                     display: block
+                    transition: ease-in-out 0.4s
                     &:visited
                         color: $primary-font-color
                         text-decoration: none
                 &:hover
-                    background-color: green
+                    color: $secondary-bg-color
+                    background-color: $primary-font-color
                     transform: scale(1.1)
+                    a
+                        color: $secondary-bg-color
 
 /*Présentation page*/
 
@@ -147,20 +153,30 @@ main
                             height: 200px
                             object-fit: cover
                         div.article-desc
-                            background-color: red
+                            background-color: $third-bg-color
                             p
                                 display: flex
                                 justify-content: center
                             p.item-tech
-                                background-color: pink
+                                padding: 2px
+                                background-color: $primary-bg-color
                 div#slide-btn
                     position: relative
                     bottom: 40%
                     display: flex
                     justify-content: space-between
                     button
+                        cursor: pointer
                         padding: 10px 20px
-                        border: 1px solid #fff
+                        background-color: $third-bg-color
+                        color: $primary-font-color
+                        border: 1px solid $primary-font-color
+                        transition: 0.4s ease-in-out
+                        &:hover
+                            background-color: $primary-font-color
+                            color: $third-bg-color
+                            border: 1px solid $third-bg-color
+                            transform: scale(1.1)
 
 /*Projects page*/
 
@@ -173,9 +189,15 @@ main#main-projects
             display: flex
             flex-direction: column
             align-items: center
-            width: 80svw
+            div
+                display: flex
+                flex-direction: column
+                align-items: center
             img
-                width: 100%
+                object-fit: cover
+                object-position: top
+                width: 70%
+                border: 4px white solide
 
 /*Projects page*/
 
