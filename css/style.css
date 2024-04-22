@@ -321,14 +321,28 @@ main#main-projects ul#projects-grid {
   grid-template-columns: 1fr;
 }
 main#main-projects ul#projects-grid li {
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main#main-projects ul#projects-grid li div {
+main#main-projects ul#projects-grid li div.article-desc {
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60%;
+}
+main#main-projects ul#projects-grid li div.article-desc p.item-tech {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #5F5F5F;
+}
+main#main-projects ul#projects-grid li div.article-desc p.item-desc {
+  background-color: #313131;
+  padding: 10px;
 }
 main#main-projects ul#projects-grid li img {
   -o-object-fit: cover;
