@@ -9,7 +9,8 @@ body {
   font-family: "Exo 2", "", "sans-serif";
   color: #fff;
   background-color: #5F5F5F;
-  font-size: 13px;
+  font-size: 16px;
+  min-height: 100svh;
 }
 body button {
   font-family: "Exo 2", "", "sans-serif";
@@ -227,7 +228,7 @@ main section#career div ul#career-list::before {
   content: "";
   position: absolute;
   top: 5%;
-  left: 5.2%;
+  left: 4%;
   z-index: -1;
   width: 3px;
   height: 100%;
@@ -315,6 +316,7 @@ main section#projects div#projects-section div#project-slide div#slide-btn butto
 /*Projects page*/
 main#main-projects {
   background-color: #4E4E4E;
+  padding: 10px;
 }
 main#main-projects ul#projects-grid {
   display: grid;
@@ -332,6 +334,7 @@ main#main-projects ul#projects-grid li div.article-desc {
   flex-direction: column;
   align-items: center;
   width: 60%;
+  text-align: center;
 }
 main#main-projects ul#projects-grid li div.article-desc p.item-tech {
   padding: 5px 0;
@@ -342,7 +345,8 @@ main#main-projects ul#projects-grid li div.article-desc p.item-tech {
 }
 main#main-projects ul#projects-grid li div.article-desc p.item-desc {
   background-color: #313131;
-  padding: 10px;
+  padding: 10px 0;
+  width: 100%;
 }
 main#main-projects ul#projects-grid li img {
   -o-object-fit: cover;
@@ -356,6 +360,10 @@ main#main-projects ul#projects-grid li img {
 /*Projects page*/
 main#main-contact {
   background-color: #4E4E4E;
+  padding: 10px;
+}
+main#main-contact * {
+  margin: 6px 0;
 }
 main#main-contact form {
   display: flex;
@@ -364,12 +372,17 @@ main#main-contact form {
 }
 main#main-contact form input {
   width: 80vw;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 main#main-contact form textarea {
   width: 80vw;
+  height: 5rem;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 main#main-contact form button {
-  padding: 5px 10px;
+  padding: 10px 15px;
   border: none;
   color: #fff;
   background-color: #5076FF;
